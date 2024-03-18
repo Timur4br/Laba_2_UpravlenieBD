@@ -9,7 +9,7 @@ import java.util.List;
 
 public class MastersRepozitory implements IRepo<Masters> {
     public EntityManager em =
-            Persistence.createEntityManagerFactory("TSTS").createEntityManager();
+            Persistence.createEntityManagerFactory("TST").createEntityManager();
 
     @Override
     public int insert(Masters masters) throws SQLException {

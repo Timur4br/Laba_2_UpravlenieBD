@@ -35,10 +35,5 @@ public class Main {
         System.out.println("------Клиенты и их мастера-------");
 
             BDWork.printClientMasters((Clients) clients); // Print information about client-stylist
-
-
-
-
-
     }
 }

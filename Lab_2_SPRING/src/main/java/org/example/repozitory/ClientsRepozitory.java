@@ -13,7 +13,7 @@ import java.util.List;
 
 public class ClientsRepozitory implements IRepo<Clients> {
     public EntityManager em =
-            Persistence.createEntityManagerFactory("TSTS").createEntityManager();
+            Persistence.createEntityManagerFactory("TST").createEntityManager();
     @Override
     public int insert(Clients client) throws SQLException {
         String str = String.format("INSERT INTO clients (surname, name, id_master) VALUES ('%s', '%s', %s)",
