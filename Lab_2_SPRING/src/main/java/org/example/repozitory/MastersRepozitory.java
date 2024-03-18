@@ -51,9 +51,8 @@ public class MastersRepozitory implements IRepo<Masters> {
     }
 
     @Override
-    public List<Masters> getList() {
-        TypedQuery<Masters> namedQuery = em.createNamedQuery("Masters.getAll", Masters.class);
-        return namedQuery.getResultList();
+    public List<Masters> getList()   {
+        return em.createQuery("SELECT c FROM Masters c", Masters.class).getResultList();
     }
     @Override
     public Connection connectToDB() throws SQLException {

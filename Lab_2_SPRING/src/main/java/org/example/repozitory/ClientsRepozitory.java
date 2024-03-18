@@ -56,8 +56,7 @@ public class ClientsRepozitory implements IRepo<Clients> {
     }
     @Override
     public List<Clients> getList() {
-        TypedQuery<Clients> namedQuery = em.createNamedQuery("Clients.getAll", Clients.class);
-        return namedQuery.getResultList();
+        return em.createQuery("SELECT c FROM Clients c", Clients.class).getResultList();
     }
     @Override
     public Connection connectToDB() throws SQLException {

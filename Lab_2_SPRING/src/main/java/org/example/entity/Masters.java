@@ -13,7 +13,7 @@ public class Masters {
     @Column(name = "name", length = 255)
     private String name;
     @Column(name="isDelete")
-    private boolean isDelete;
+    private Boolean isDelete;
     public Masters(Integer id, String surname, String name, Boolean isDelete) {
         this.id = id;
         this.surname = surname;

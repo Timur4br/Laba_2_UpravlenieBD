@@ -14,15 +14,15 @@ public class Clients {
     @Column(name = "name", length = 255)
     private String name;
     @ManyToOne
-    @JoinColumn(name = "id_masters")
-    private Masters id_masters;
+    @JoinColumn(name = "id_master")
+    private Masters id_master;
     @Column(name = "isDelete")
-    private boolean isDelete;
-    public Clients(Integer id, String surname, String name, Masters id_masters, Boolean isDelete) {
+    private Boolean isDelete;
+    public Clients(Integer id, String surname, String name, Masters id_master, Boolean isDelete) {
         this.id = id;
         this.surname = surname;
         this.name = name;
-        this.id_masters = id_masters;
+        this.id_master = id_master;
         this.isDelete = isDelete;
     }
     public  Clients(){}
@@ -52,11 +52,11 @@ public class Clients {
     }
 
     public Masters getIdMasters() {
-        return id_masters;
+        return id_master;
     }
 
     public void setIdMasters(Masters id_masters) {
-        this.id_masters = id_masters;
+        this.id_master = id_masters;
     }
 
     public boolean isDelete() {
